@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D&G Agropec | Boitel em Jangada - MT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f1ea;
+    color:#333;
+}
+
+/* MENU */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+
+nav h2{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+}
+
+/* HERO */
+header{
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('assets/img/capa.jpg') no-repeat center center;
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    font-size:3.5rem;
+    font-weight:700;
+}
+
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 40px;
+    background:#1f3d2b;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:0.3s ease;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#163021;
+    transform:scale(1.05);
+}
+
+/* SEÇÕES */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2.3rem;
+    color:#1f3d2b;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img, video{
+    width:100%;
+    border-radius:10px;
+}
+
+/* SOBRE */
+.sobre{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.sobre img{
+    width:100%;
+    border-radius:15px;
+}
+
+.highlight{
+    background:#1f3d2b;
+    color:white;
+    padding:80px 10%;
+    text-align:center;
+    font-size:1.6rem;
+}
+
+/* CONTATO */
+.contact{
+    text-align:center;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+    .sobre{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:2.3rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>D&G Agropec</h2>
+    <div>
+        <a href="#estrutura">Estrutura</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#contato">Contato</a>
+    </div>
+</nav>
+
+<header>
+    <div>
+        <h1>Excelência em Boitel e Confinamento Bovino</h1>
+        <p>Sistema rotativo com capacidade para 2.000 animais/ano</p>
+        <a href="#contato" class="btn">Solicitar Orçamento</a>
+    </div>
+</header>
+
+<section class="sobre">
+    <img src="assets/img/fazenda.jpg" alt="Fazenda">
+    <div>
+        <h2>Sobre a Fazenda</h2>
+        <p>Localizada em Jangada – MT, a D&G Agropec atua com foco em eficiência produtiva, bem-estar animal e alto desempenho no confinamento bovino.</p>
+        <p>Trabalhamos com gestão técnica, genética selecionada e manejo estratégico para maximizar resultados.</p>
+    </div>
+</section>
+
+<section id="estrutura">
+    <h2 class="section-title">Nossa Estrutura</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="assets/img/vaca_mae.jpg">
+            <h3>Matrizes de Qualidade</h3>
+        </div>
+        <div class="card">
+            <img src="assets/img/touro.jpg">
+            <h3>Genética e Desempenho</h3>
+        </div>
+    </div>
+</section>
+
+<section id="videos">
+    <h2 class="section-title">Vídeos da Fazenda</h2>
+    <div class="grid">
+        <div class="card"><video controls><source src="assets/video/video1.mp4" type="video/mp4"></video></div>
+        <div class="card"><video controls><source src="assets/video/video2.mp4" type="video/mp4"></video></div>
+        <div class="card"><video controls><source src="assets/video/video3.mp4" type="video/mp4"></video></div>
+        <div class="card"><video controls><source src="assets/video/video4.mp4" type="video/mp4"></video></div>
+    </div>
+</section>
+
+<section class="highlight">
+    Capacidade, eficiência e resultado no confinamento bovino.
+</section>
+
+<section id="contato">
+    <h2 class="section-title">Contato</h2>
+    <div class="contact">
+        <p><strong>Localização:</strong> Jangada – MT – Brasil</p>
+        <p><strong>WhatsApp:</strong> (65) 99946-9047</p>
+        <p><strong>Email:</strong> direcao.codewise@gmail.com</p>
+        <a href="https://wa.me/5565999469047" target="_blank" class="btn">Falar no WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 D&G Agropec - Todos os direitos reservados
+</footer>
+
+</body>
+</html>
