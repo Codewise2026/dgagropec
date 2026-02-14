@@ -15,9 +15,37 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#f4f1ea;
     color:#333;
+}
+
+/* MENU */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+
+nav h2{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
 }
 
 /* HERO */
@@ -36,15 +64,13 @@ header{
 }
 
 header h1{
-    font-size:3.2rem;
+    font-size:3.5rem;
     font-weight:700;
-    letter-spacing:1px;
 }
 
 header p{
     margin-top:15px;
     font-size:1.2rem;
-    font-weight:300;
 }
 
 .btn{
@@ -66,14 +92,13 @@ header p{
 
 /* SEÇÕES */
 section{
-    padding:80px 10%;
+    padding:100px 10%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
-    font-size:2.2rem;
-    font-weight:600;
+    margin-bottom:60px;
+    font-size:2.3rem;
     color:#1f3d2b;
 }
 
@@ -93,7 +118,7 @@ section{
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .card img, video{
@@ -101,14 +126,25 @@ section{
     border-radius:10px;
 }
 
-/* DESTAQUE */
+/* SOBRE */
+.sobre{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.sobre img{
+    width:100%;
+    border-radius:15px;
+}
+
 .highlight{
     background:#1f3d2b;
     color:white;
-    padding:70px 10%;
+    padding:80px 10%;
     text-align:center;
-    font-size:1.5rem;
-    font-weight:300;
+    font-size:1.6rem;
 }
 
 /* CONTATO */
@@ -116,23 +152,21 @@ section{
     text-align:center;
 }
 
-.contact p{
-    margin-bottom:10px;
-}
-
-/* RODAPÉ */
 footer{
     background:#111;
     color:white;
     text-align:center;
     padding:25px;
-    font-size:0.9rem;
 }
 
 /* RESPONSIVO */
-@media(max-width:768px){
+@media(max-width:900px){
+    .sobre{
+        grid-template-columns:1fr;
+    }
+
     header h1{
-        font-size:2.2rem;
+        font-size:2.3rem;
     }
 }
 </style>
@@ -140,57 +174,58 @@ footer{
 
 <body>
 
+<nav>
+    <h2>D&G Agropec</h2>
+    <div>
+        <a href="#estrutura">Estrutura</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#contato">Contato</a>
+    </div>
+</nav>
+
 <header>
     <div>
-        <h1>D&G Agropec</h1>
-        <p>Excelência em Boitel e Confinamento Bovino</p>
+        <h1>Excelência em Boitel e Confinamento Bovino</h1>
         <p>Sistema rotativo com capacidade para 2.000 animais/ano</p>
         <a href="#contato" class="btn">Solicitar Orçamento</a>
     </div>
 </header>
 
-<section>
+<section class="sobre">
+    <img src="assets/img/fazenda.jpg" alt="Fazenda">
+    <div>
+        <h2>Sobre a Fazenda</h2>
+        <p>Localizada em Jangada – MT, a D&G Agropec atua com foco em eficiência produtiva, bem-estar animal e alto desempenho no confinamento bovino.</p>
+        <p>Trabalhamos com gestão técnica, genética selecionada e manejo estratégico para maximizar resultados.</p>
+    </div>
+</section>
+
+<section id="estrutura">
     <h2 class="section-title">Nossa Estrutura</h2>
     <div class="grid">
         <div class="card">
-            <img src="assets/img/vaca_mae.jpg" alt="Matrizes">
+            <img src="assets/img/vaca_mae.jpg">
             <h3>Matrizes de Qualidade</h3>
         </div>
         <div class="card">
-            <img src="assets/img/touro.jpg" alt="Genética">
+            <img src="assets/img/touro.jpg">
             <h3>Genética e Desempenho</h3>
         </div>
     </div>
 </section>
 
-<section>
+<section id="videos">
     <h2 class="section-title">Vídeos da Fazenda</h2>
     <div class="grid">
-        <div class="card">
-            <video controls>
-                <source src="assets/video/video1.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="card">
-            <video controls>
-                <source src="assets/video/video2.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="card">
-            <video controls>
-                <source src="assets/video/video3.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="card">
-            <video controls>
-                <source src="assets/video/video4.mp4" type="video/mp4">
-            </video>
-        </div>
+        <div class="card"><video controls><source src="assets/video/video1.mp4" type="video/mp4"></video></div>
+        <div class="card"><video controls><source src="assets/video/video2.mp4" type="video/mp4"></video></div>
+        <div class="card"><video controls><source src="assets/video/video3.mp4" type="video/mp4"></video></div>
+        <div class="card"><video controls><source src="assets/video/video4.mp4" type="video/mp4"></video></div>
     </div>
 </section>
 
 <section class="highlight">
-    <h2>Capacidade, eficiência e resultado no confinamento bovino.</h2>
+    Capacidade, eficiência e resultado no confinamento bovino.
 </section>
 
 <section id="contato">
