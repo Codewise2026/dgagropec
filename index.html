@@ -20,11 +20,12 @@ body{
     color:#333;
 }
 
+/* HERO */
 header{
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('img/capa.jpg');
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('assets/img/capa.jpg') no-repeat center center;
     background-size:cover;
-    background-position:center;
     height:100vh;
     display:flex;
     align-items:center;
@@ -35,38 +36,43 @@ header{
 }
 
 header h1{
-    font-size:3rem;
+    font-size:3.2rem;
     font-weight:700;
+    letter-spacing:1px;
 }
 
 header p{
     margin-top:15px;
     font-size:1.2rem;
+    font-weight:300;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:15px 35px;
+    margin-top:30px;
+    padding:15px 40px;
     background:#1f3d2b;
     color:white;
     text-decoration:none;
     border-radius:50px;
-    transition:0.3s;
+    transition:0.3s ease;
+    font-weight:600;
 }
 
 .btn:hover{
     background:#163021;
+    transform:scale(1.05);
 }
 
+/* SEÇÕES */
 section{
     padding:80px 10%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
-    font-size:2rem;
+    margin-bottom:50px;
+    font-size:2.2rem;
     font-weight:600;
     color:#1f3d2b;
 }
@@ -81,8 +87,13 @@ section{
     background:white;
     padding:20px;
     border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
     text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card img, video{
@@ -90,27 +101,38 @@ section{
     border-radius:10px;
 }
 
+/* DESTAQUE */
 .highlight{
     background:#1f3d2b;
     color:white;
-    padding:60px 10%;
+    padding:70px 10%;
     text-align:center;
+    font-size:1.5rem;
+    font-weight:300;
 }
 
+/* CONTATO */
 .contact{
     text-align:center;
 }
 
+.contact p{
+    margin-bottom:10px;
+}
+
+/* RODAPÉ */
 footer{
     background:#111;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
+    font-size:0.9rem;
 }
 
+/* RESPONSIVO */
 @media(max-width:768px){
     header h1{
-        font-size:2rem;
+        font-size:2.2rem;
     }
 }
 </style>
@@ -131,11 +153,11 @@ footer{
     <h2 class="section-title">Nossa Estrutura</h2>
     <div class="grid">
         <div class="card">
-            <img src="img/vaca_mae.jpg">
+            <img src="assets/img/vaca_mae.jpg" alt="Matrizes">
             <h3>Matrizes de Qualidade</h3>
         </div>
         <div class="card">
-            <img src="img/touro.jpg">
+            <img src="assets/img/touro.jpg" alt="Genética">
             <h3>Genética e Desempenho</h3>
         </div>
     </div>
@@ -146,22 +168,22 @@ footer{
     <div class="grid">
         <div class="card">
             <video controls>
-                <source src="img/video1.mp4" type="video/mp4">
+                <source src="assets/video/video1.mp4" type="video/mp4">
             </video>
         </div>
         <div class="card">
             <video controls>
-                <source src="img/video2.mp4" type="video/mp4">
+                <source src="assets/video/video2.mp4" type="video/mp4">
             </video>
         </div>
         <div class="card">
             <video controls>
-                <source src="img/video3.mp4" type="video/mp4">
+                <source src="assets/video/video3.mp4" type="video/mp4">
             </video>
         </div>
         <div class="card">
             <video controls>
-                <source src="img/video4.mp4" type="video/mp4">
+                <source src="assets/video/video4.mp4" type="video/mp4">
             </video>
         </div>
     </div>
